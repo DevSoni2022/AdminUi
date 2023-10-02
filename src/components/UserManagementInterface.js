@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar";
 import Pagination from "./Pagination";
 import DeleteSelectedButton from "./DeleteSelectedButton";
 import EditModal from "./EditModal";
-import axios from 'axios';
+import axios from "axios";
 
 const API_URL =
   "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json";
@@ -81,7 +81,7 @@ const UserManagementInterface = () => {
 
   const handleSelectAllRows = (event) => {
     const { checked } = event.target;
-    const allRowIds = currentUsers.map((user) => user.id); // Use currentUsers instead of filteredUsers
+    const allRowIds = currentUsers.map((user) => user.id);
 
     if (checked && selectedRows.length !== allRowIds.length) {
       setSelectedRows(allRowIds);
@@ -109,6 +109,10 @@ const UserManagementInterface = () => {
     }
   };
 
+
+
+
+
   const handleDeleteSelected = () => {
     const updatedUsers = users.filter(
       (user) => !selectedRows.includes(user.id)
@@ -124,9 +128,13 @@ const UserManagementInterface = () => {
   const endIndex = startIndex + itemsPerPage;
   const currentUsers = filteredUsers.slice(startIndex, endIndex);
 
+
+
+  
   return (
     <div className="container">
       <SearchBar searchQuery={searchQuery} handleSearch={handleSearch} />
+
       <AdminTable
         users={currentUsers}
         selectedRows={selectedRows}
