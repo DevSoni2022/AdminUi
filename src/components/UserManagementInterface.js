@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
-import "../styles/UserManagementInterface.css";
+import "../styles/UserManagement.css";
 import { toast } from "react-toastify";
-import Table from "./Table";
+import AdminTable from "./AdminTable";
 import SearchBar from "./SearchBar";
 import Pagination from "./Pagination";
 import DeleteSelectedButton from "./DeleteSelectedButton";
@@ -127,7 +127,7 @@ const UserManagementInterface = () => {
   return (
     <div className="container">
       <SearchBar searchQuery={searchQuery} handleSearch={handleSearch} />
-      <Table
+      <AdminTable
         users={currentUsers}
         selectedRows={selectedRows}
         handleRowSelection={handleRowSelection}

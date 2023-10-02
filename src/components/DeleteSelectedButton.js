@@ -1,6 +1,6 @@
 import React from "react";
 
-const DeleteSelectedButton = ({ handleDeleteSelected, selectedRows }) => {
+const DeleteSelected = ({ handleDeleteSelected, selectedRows }) => {
   return (
     <button
       className="delete-selected-button"
@@ -12,4 +12,4 @@ const DeleteSelectedButton = ({ handleDeleteSelected, selectedRows }) => {
   );
 };
 
-export default DeleteSelectedButton;
+export default DeleteSelected;

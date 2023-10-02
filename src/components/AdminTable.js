@@ -1,7 +1,7 @@
 import React from "react";
 import TableRow from "./TableRow";
 
-const Table = ({
+const AdminTable = ({
   users,
   selectedRows,
   handleRowSelection,
@@ -47,4 +47,4 @@ const Table = ({
   );
 };
 
-export default Table;
+export default AdminTable;
